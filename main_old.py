@@ -1,9 +1,5 @@
 #Developed by Marius Sava
 #still_learning :)
-
-['main.py', 'books/frankenstein.txt']
-print("Usage: python3 main.py <path_to_book>")
-import sys
 from stats import count_words
 from stats import count_characters
 from stats import sort_characters
@@ -14,8 +10,8 @@ def get_book_text(filepath):
         return f.read()
 
 def main():
-    book_text = get_book_text(sys.argv[1])
+    filepath = "books/frankenstein.txt"
+    book_text = get_book_text(filepath)
     print_stats(book_text)
-
 main()
 

@@ -25,14 +25,5 @@ def sort_characters(char_counts):
 def print_stats(text):
     print(f"Found {count_words(text)} total words")
     char_counts = count_characters(text)
-    sorted_characters=sort_characters(char_counts)
-    out = "\n ".join(
-        f"{d['char'] if d['char']!=' ' else 'space'}: {d['num']}"
-        for d in sorted_characters
-        if d['char'].isalpha()
-)
-    print(out)
-
-#    print(sorted_characters)
-#    print(f"e: {char_counts.get('e','0')}")
-#    print(f"t: {char_counts.get('t','0')}")
+    print(f"e: {char_counts.get('e','0')}")
+    print(f"t: {char_counts.get('t','0')}")
